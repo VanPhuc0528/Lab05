@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Danh sách sản phẩm</title>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<body>
+    <header>
+        <h1>Danh sách sản phẩm</h1>
+    </header>
+    <ul>
+        <ul class="product-list">
+            <% products.forEach(product => { %>
+                <li class="product-item">
+                    <img src="<%= product.image %>" alt="<%= product.name %>" width="150">
+                    <h2><%= product.name %></h2>
+                    <p>Giá: <%= product.price %> VND</p>
+                    <a href="/product/<%= product.id %>" class="btn">Xem chi tiết</a>
+                    <form action="/cart/add/<%= product.id %>" method="POST">
+                        <button type="submit" class="btn">Thêm vào giỏ hàng</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+        
+    </ul>
+    
+    <a href="/cart">Xem giỏ hàng</a>
+</body>
+</html>

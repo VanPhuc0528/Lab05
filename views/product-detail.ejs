@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Chi tiết sản phẩm</title>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<body>
+    <header>
+        <h1>Chi tiết sản phẩm</h1>
+    </header>
+    <div>
+        <h2><%= product.name %></h2>
+        <img src="<%= product.image %>" alt="<%= product.name %>" width="250">
+        <p>Giá: <%= product.price %> VNĐ</p>
+        <form action="/cart/add/<%= product.id %>" method="POST">
+            <button type="submit">Thêm vào giỏ hàng</button>
+        </form>
+        <a href="/product">Quay lại danh sách</a>
+    </div>
+</body>
+</html>
