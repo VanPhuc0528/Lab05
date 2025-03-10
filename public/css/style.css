@@ -126,6 +126,62 @@ button:hover, .btn:hover {
     color: #007bff;
 }
 
+/* Trang chi tiết sản phẩm */
+.product-detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.product-image {
+    width: 650px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
 /* Nút xóa sản phẩm */
 .btn-remove {
     background: #dc3545;

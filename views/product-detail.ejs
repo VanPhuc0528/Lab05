@@ -8,14 +8,17 @@
     <header>
         <h1>Chi tiết sản phẩm</h1>
     </header>
-    <div>
-        <h2><%= product.name %></h2>
-        <img src="<%= product.image %>" alt="<%= product.name %>" width="250">
-        <p>Giá: <%= product.price %> VNĐ</p>
-        <form action="/cart/add/<%= product.id %>" method="POST">
-            <button type="submit">Thêm vào giỏ hàng</button>
-        </form>
-        <a href="/product">Quay lại danh sách</a>
+    <div class="product-container">
+        <img src="<%= product.image %>" alt="<%= product.name %>" class="product-image">
+        <div class="product-info">
+            <h2><%= product.name %></h2>
+            <p><strong>Mô tả:</strong> <%= product.description %></p>
+            <p><strong>Giá:</strong> <%= product.price %> VNĐ</p>
+            <form action="/cart/add/<%= product.id %>" method="POST">
+                <button type="submit">Thêm vào giỏ hàng</button>
+            </form>
+            <a href="/product">Quay lại danh sách</a>
+        </div>
     </div>
 </body>
 </html>
